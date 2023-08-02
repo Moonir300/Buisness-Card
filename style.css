@@ -1,0 +1,168 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and dimensions for the whole page */
+body {
+  height: 100%; /* Set full height */
+  width: 1440px; /* Set width */
+  background-color: hsl(233, 47%, 7%); /* Set background color */
+}
+
+/* Styling for the left section of the container */
+.left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+}
+
+/* Styling for the main container */
+.container {
+  background-color: hsl(244, 38%, 16%); /* Set background color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  width: 1130px; /* Set container width */
+  height: 446px; /* Set container height */
+  display: grid;
+  place-items: center; /* Center child elements */
+  border-radius: 10px; /* Round corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.16); /* Add shadow effect */
+}
+
+/* Styling for the image section of the container */
+.container .pic {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-top-right-radius: 12px; /* Round top-right corner */
+  border-bottom-right-radius: 12px; /* Round bottom-right corner */
+  overflow: hidden;
+  user-select: none; /* Disable text selection */
+}
+
+/* Overlay effect for the image */
+.container .pic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(277, 64%, 61%); /* Overlay color */
+  mix-blend-mode: multiply; /* Apply blending mode to create the overlay effect */
+  border-top-right-radius: 12px; /* Round top-right corner */
+  border-bottom-right-radius: 12px; /* Round bottom-right corner */
+}
+
+/* Styling for the image */
+.container .pic img {
+  width: 100%; /* Set image width to 100% */
+  height: auto; /* Maintain image aspect ratio */
+  user-select: none; /* Disable text selection */
+}
+
+/* Styling for the main title */
+h1 {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  color: hsl(0, 0%, 100%); /* Set text color */
+  font-size: 38px;
+  font-family: "Inter", sans-serif; /* Use Inter font family */
+  font-weight: 700; /* Set font weight */
+  user-select: none; /* Disable text selection */
+  text-shadow: 2px 2px 4px rgba(34, 3, 34, 0.775); /* Add soft dark text shadow */
+}
+
+/* Styling for the span within the title */
+h1 span {
+  color: hsl(277, 64%, 61%); /* Set text color */
+  font-size: 38px;
+  font-family: "Inter", sans-serif; /* Use Inter font family */
+  font-weight: 700; /* Set font weight */
+  user-select: none; /* Disable text selection */
+  text-shadow: 2px 2px 4px rgba(34, 3, 34, 0.775); /* Add soft dark text shadow */
+}
+
+/* Styling for the subtitle */
+h5 {
+  color: hsla(0, 0%, 100%, 0.75); /* Set text color */
+  font-family: "inter", sans-serif; /* Use inter font family */
+  font-weight: 400; /* Set font weight */
+  font-size: 15px; /* Set font size */
+  position: absolute;
+  top: 180px;
+  left: 80px;
+  letter-spacing: 0.5px; /* Add letter spacing */
+  user-select: none; /* Disable text selection */
+  line-height: 1.5; /* Set line height */
+  text-shadow: 2px 2px 4px rgba(34, 3, 34, 0.775); /* Add soft dark text shadow */
+}
+
+/* Styling for the data list */
+.data-list {
+  display: flex; /* Display data items in a row */
+  margin-top: 1rem; /* Add margin to the top */
+  position: absolute;
+  top: 290px;
+  left: 80px;
+}
+
+/* Styling for each data item */
+.data-item {
+  display: flex; /* Display data number and name in a column */
+  flex-direction: column;
+  align-items: center;
+  margin-right: 60px; /* Adjust spacing between data items */
+}
+
+/* Styling for the data number */
+.data-number {
+  font-size: 23px; /* Set font size */
+  color: hsl(0, 0%, 100%); /* Set text color */
+  font-weight: 700; /* Set font weight */
+  font-family: "inter", sans-serif; /* Use inter font family */
+  margin-right: auto; /* Push data number to the right */
+  user-select: none; /* Disable text selection */
+  text-shadow: 2px 2px 4px rgba(34, 3, 34, 0.775); /* Add soft dark text shadow */
+}
+
+/* Styling for the data name */
+.data-name {
+  font-size: 10px; /* Set font size */
+  font-weight: 400; /* Set font weight */
+  color: hsla(0, 0%, 100%, 0.6); /* Set text color */
+  font-family: "Lexend Deca", sans-serif; /* Use Lexend Deca font family */
+  line-height: 2.5; /* Set line height */
+  margin-right: auto; /* Push data name to the right */
+  letter-spacing: 1.25px; /* Add letter spacing */
+  user-select: none; /* Disable text selection */
+  text-shadow: 2px 2px 4px rgba(34, 3, 34, 0.775); /* Add soft dark text shadow */
+}
+
+/* Styling for the attribution section */
+.attribution {
+  font-size: 11px; /* Set font size */
+  text-align: center; /* Align text to the center */
+  color: rgba(255, 255, 255, 0.522); /* Set text color */
+  font-family: "Lexend Deca", sans-serif; /* Use Lexend Deca font family */
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%); /* Center horizontally */
+  user-select: none; /* Disable text selection */
+}
+
+/* Styling for the attribution links */
+.attribution a {
+  color: hsla(277, 64%, 61%, 0.758); /* Set link color */
+  text-decoration: none; /* Remove underline */
+}
